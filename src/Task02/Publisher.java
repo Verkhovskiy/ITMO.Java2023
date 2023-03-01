@@ -1,11 +1,11 @@
 package Task02;
 
 public enum Publisher {
-    Penguin("Penguin/Random House", "USA"),
-    Hachette("Hachette Book Group", "USA"),
-    HarperCollins("Harper Collins", "USA"),
-    SimonAndSchuster("Simon and Schuster", "USA"),
-    Macmillan("Macmillan", "USA");
+    PENGUIN("Penguin/Random House", "USA"),
+    HACHETTE("Hachette Book Group", "USA"),
+    HARPERCOLLINS("Harper Collins", "USA"),
+    SIMONANDSCHUSTER("Simon and Schuster", "USA"),
+    MACMILLAN("Macmillan", "USA");
 
     Publisher(String name, String country) {
         this.name = name;

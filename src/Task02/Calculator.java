@@ -13,14 +13,14 @@ public class Calculator {
     }
 
     // ДЕЛЕНИЕ
-    public static Integer divide(Integer a, Integer b) {
-        return a/b;
+    public static Double divide(Integer a, Integer b) {
+        return (double)a/b;
     }
     public static Double divide(Double a, Double b) {
         return a/b;
     }
-    public static Long divide(Long a, Long b) {
-        return a/b;
+    public static Double divide(Long a, Long b) {
+        return (double)a/b;
     }
 
     // УМНОЖЕНИЕ
