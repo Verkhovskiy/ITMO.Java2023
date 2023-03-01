@@ -1,2 +1,4 @@
 # Project exclude paths
 /out/
+/ITMO.Java2023.iml
+/.idea/
