@@ -11,7 +11,7 @@ public class Main {
         System.out.println(isPalindrome(word2));
 
         String text2 = "Попробуем зацензурировать слово бяка. Получилось? А что будет, если повторить слово бяка?";
-        System.out.println(censor(text2));
+        System.out.println(censor(text2, "бяка"));
 
         String text3 = "Здесь я пытаюсь посчитать сколько раз повторяется этот фрагмент. И повторяется ли этот фрагмент вообще. Возможно этот фрагмент совсем не повторяется?";
         System.out.println(countRepetitions("этот фрагмент", text3));
@@ -28,16 +28,11 @@ public class Main {
         return longest;
     }
     public static boolean isPalindrome(String word) {
-        char[] chars = word.toLowerCase().toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            if (chars[i] != chars[chars.length - i - 1]) {
-                return false;
-            }
-        }
-        return true;
+        StringBuilder reversed = new StringBuilder(word.toLowerCase()).reverse();
+        return word.toLowerCase().equals(reversed.toString());
     }
-    public static String censor(String words) {
-        return words.replaceAll("бяка","[вырезано цензурой]");
+    public static String censor(String text, String censoredWord) {
+        return text.replaceAll(censoredWord,"[вырезано цензурой]");
     }
     public static int countRepetitions(String subString, String mainString) {
         //Наверно есть способ лучше?
