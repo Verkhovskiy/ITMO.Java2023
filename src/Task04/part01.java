@@ -77,22 +77,13 @@ public class part01 {
     }
     public static boolean isSumEquals(int a, int b, int c) {
         int sum = a + b;
-        if (sum == c) {
-            return true;
-        }
-        return false;
+        return sum == c;
     }
     public static boolean isIncreasing(int a, int b, int c) {
-        if (b > a && c > b) {
-            return true;
-        }
-        return false;
+        return b > a && c > b;
     }
     public static boolean isThreeStartEnd(int... numbers) {
-        if (numbers[0] == 3 || numbers[numbers.length-1] == 3) {
-            return true;
-        }
-        return false;
+        return numbers[0] == 3 || numbers[numbers.length-1] == 3;
     }
     public static boolean isContainingThree(int... numbers) {
         for (int i = 0; i < numbers.length; i++) {
