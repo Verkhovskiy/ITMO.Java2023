@@ -1,8 +1,10 @@
 package Task06;
 
 public class UserChild extends User{
-    public void setName() {
+    @Override
+    public void setInfo() {
         System.out.println("Input name:");
         super.setName(scan.nextLine());
+        System.out.println("Updated name is: " + super.getName());
     }
 }

@@ -15,8 +15,9 @@ public class Main {
         IntNumberChild myNumber = new IntNumberChild();
         myNumber.getNumber();
 
-        UserChild myUser = new UserChild();
-        myUser.setName();
-        System.out.println("User's name is: " + myUser.getName());
+        User firstUser = new User();
+        firstUser.setInfo();
+        UserChild secondUser = new UserChild();
+        secondUser.setInfo();
     }
 }

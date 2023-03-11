@@ -20,7 +20,12 @@ public class User {
     }
 
     public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setInfo() {
         System.out.println("Input age:");
         this.age = scan.nextInt();
+        System.out.println("Updated age is: " + this.age);
     }
 }
