@@ -8,9 +8,14 @@ public class Main {
         for (int i = 1; i <= 10; i++) {
             Thread thread = new MyThread();
             thread.setName("Thread " + i);
-            //System.out.println("State before start - " + thread.getName() + " : " + thread.getState());
+            System.out.println("State before start - " + thread.getName() + " : " + thread.getState());
             thread.start();
-            //System.out.println("State after start - " + thread.getName() + " : " + thread.getState());
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println("State after start - " + thread.getName() + " : " + thread.getState());
         }
 
         // TASK 3
@@ -37,15 +42,15 @@ public class Main {
         Object lock = new Object();
         Thread name1 = new NameThread(lock);
         Thread name2 = new NameThread(lock);
-        name1.start();
-        name2.start();
+        //name1.start();
+        //name2.start();
     }
 
     public static class MyThread extends Thread {
         @Override
         public void run() {
             super.run();
-            //System.out.println("State during running - " + getName() + " : " + getState());
+            System.out.println("State during running - " + getName() + " : " + getState());
             for (int i = 0; i <= 100; i++) {
                 //System.out.println(i);
             }
